@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent" >
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collection_tale"
+            android:id="@+id/bt_collection_tale" android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/bt_collection_standard"
+            android:layout_alignRight="@+id/bt_collection_standard"/>
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/collection_standard"
+            android:id="@+id/bt_collection_standard"
+            android:layout_above="@+id/bt_collection_tale" android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/margin_vertical_location_fragment"/>
+    <Spinner
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner" android:layout_below="@+id/bt_collection_tale"
+            android:layout_marginTop="@dimen/margin_vertical_location_fragment"
+            android:layout_alignLeft="@+id/bt_collection_tale" android:layout_alignRight="@+id/bt_collection_tale"/>
+</RelativeLayout>
+
