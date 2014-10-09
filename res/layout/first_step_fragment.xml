@@ -26,45 +26,45 @@
             android:id="@+id/spinner_first_step_width"
             android:layout_below="@+id/tv_first_step_title"
             android:layout_alignRight="@+id/center"/>
-    <LinearLayout
+    <RadioGroup
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/linear_layout_first_step_container_for_depth"
+            android:id="@+id/radio_group_first_step_container_for_depth"
             android:layout_below="@+id/tv_first_step_title_width"
             android:layout_alignRight="@+id/center" android:layout_alignLeft="@+id/spinner_first_step_width">
-        <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New RadioButton"
-                android:id="@+id/radioButton" android:layout_gravity="center_horizontal"/>
-        <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New RadioButton"
-                android:id="@+id/radioButton3" android:layout_gravity="center_horizontal"/>
-        <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New RadioButton"
-                android:id="@+id/radioButton4" android:layout_gravity="center_horizontal"/>
-        <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="New RadioButton"
-                android:id="@+id/radioButton2"/>
-    </LinearLayout>
+        <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="New RadioButton"-->
+                <!--android:id="@+id/radioButton" android:layout_gravity="center_horizontal"/>-->
+        <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="New RadioButton"-->
+                <!--android:id="@+id/radioButton3" android:layout_gravity="center_horizontal"/>-->
+        <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="New RadioButton"-->
+                <!--android:id="@+id/radioButton4" android:layout_gravity="center_horizontal"/>-->
+        <!--<RadioButton-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:text="New RadioButton"-->
+                <!--android:id="@+id/radioButton2"/>-->
+    </RadioGroup>
     <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/spinner_first_step_height"
-            android:layout_below="@+id/linear_layout_first_step_container_for_depth"
-            android:layout_alignLeft="@+id/linear_layout_first_step_container_for_depth"
+            android:layout_below="@+id/radio_group_first_step_container_for_depth"
+            android:layout_alignLeft="@+id/radio_group_first_step_container_for_depth"
             android:layout_alignRight="@+id/center"/>
     <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_first_step_of_laminate"
+            android:id="@+id/spinner_first_step_type_of_laminate"
             android:layout_below="@+id/spinner_first_step_height"
             android:layout_alignLeft="@+id/spinner_first_step_height"
             android:layout_alignRight="@+id/center"/>
@@ -72,8 +72,8 @@
     <Spinner
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/spinner_first_step_of_system_door"
-            android:layout_below="@+id/spinner_first_step_of_laminate"
+            android:id="@+id/spinner_first_step_type_of_system_door"
+            android:layout_below="@+id/spinner_first_step_type_of_laminate"
             android:layout_alignLeft="@+id/spinner_first_step_height"
             android:layout_alignRight="@+id/center"/>
 
@@ -93,8 +93,8 @@
             android:layout_height="wrap_content"
             android:text="@string/first_step_title_depth"
             android:id="@+id/tv_first_step_title_depth"
-            android:layout_alignBottom="@id/linear_layout_first_step_container_for_depth"
-            android:layout_alignTop="@id/linear_layout_first_step_container_for_depth"
+            android:layout_alignBottom="@id/radio_group_first_step_container_for_depth"
+            android:layout_alignTop="@id/radio_group_first_step_container_for_depth"
             android:gravity="center_vertical" android:layout_alignParentLeft="true"/>
     <TextView
             android:layout_width="wrap_content"
@@ -111,8 +111,8 @@
             android:layout_height="wrap_content"
             android:text="@string/first_step_title_type_of_laminate"
             android:id="@+id/tv_first_step_type_of_laminate"
-            android:layout_alignBottom="@id/spinner_first_step_of_laminate"
-            android:layout_alignTop="@id/spinner_first_step_of_laminate"
+            android:layout_alignBottom="@id/spinner_first_step_type_of_laminate"
+            android:layout_alignTop="@id/spinner_first_step_type_of_laminate"
             android:gravity="center_vertical"
             android:layout_alignParentLeft="true"/>
 
@@ -122,8 +122,8 @@
             android:layout_height="wrap_content"
             android:text="@string/first_step_title_type_of_system_door"
             android:id="@+id/tv_first_step_type_of_system_door"
-            android:layout_alignBottom="@id/spinner_first_step_of_system_door"
-            android:layout_alignTop="@id/spinner_first_step_of_system_door"
+            android:layout_alignBottom="@id/spinner_first_step_type_of_system_door"
+            android:layout_alignTop="@id/spinner_first_step_type_of_system_door"
             android:gravity="center_vertical"
             android:layout_alignParentLeft="true"/>
     <GridView
@@ -131,6 +131,7 @@
             android:layout_height="fill_parent"
             android:id="@+id/grid_view_first_step_container_for_box"
             android:layout_below="@+id/tv_first_step_title"
+            android:numColumns="2"
             android:layout_toRightOf="@+id/center">
     </GridView>
 

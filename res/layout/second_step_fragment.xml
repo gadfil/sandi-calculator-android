@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="15dp"
+        android:id="@+id/second_step_root">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="4"
+            android:padding="3dp">
+        <RelativeLayout android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                >
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/second_step_text"
+                      android:id="@+id/second_step_text"
+                      android:layout_centerHorizontal="true"
+                      android:layout_alignParentTop="true"/>
+
+            <ImageView android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:id="@+id/second_step_box3d_color"
+                       android:background="@drawable/dub_vybelennyi"
+                       android:layout_below="@+id/second_step_text"
+
+                    />
+            <ImageView android:layout_width="100dp"
+                       android:layout_height="100dp"
+                       android:id="@+id/second_step_box3d"
+                       android:background="@drawable/b18_3d"
+                       android:layout_below="@+id/second_step_text"
+
+                    />
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:layout_alignLeft="@+id/second_step_box3d"
+                      android:layout_alignRight="@+id/second_step_box3d"
+                      android:layout_below="@+id/second_step_box3d"
+                      android:id="@+id/second_step_number_box"
+                      android:text="№ 18"
+                      android:gravity="center_horizontal"/>
+
+            <Spinner android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:id="@+id/second_step_spinner"
+                     android:layout_below="@+id/second_step_box3d"
+                     android:layout_toRightOf="@+id/second_step_number_box"
+                    />
+
+            <ListView android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:id="@+id/second_step_door_listView"
+                      android:layout_below="@+id/second_step_spinner"/>
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_weight="2">
+            <TextView android:layout_width="fill_parent"
+                      android:layout_height="wrap_content"
+                      android:text="@string/second_step_text1"
+                      android:layout_marginLeft="10dp"
+                      android:layout_marginRight="10dp"
+                      android:id="@+id/second_step_text1"
+                    />
+
+            <ImageView android:layout_width="@dimen/box_2__door_width"
+                       android:layout_height="@dimen/image_door_height"
+
+                       android:background="@drawable/test_box_2d"
+                       android:id="@+id/second_step_image_box2d"
+                       android:layout_centerVertical="true"
+                       android:layout_centerHorizontal="true"
+
+                    />
+
+            <LinearLayout android:layout_width="@dimen/box_2__door_width"
+                          android:layout_height="@dimen/image_door_height"
+                          android:orientation="horizontal"
+                          android:weightSum="2"
+                          android:layout_centerHorizontal="true"
+                          android:layout_centerVertical="true"
+                          android:id="@+id/second_step_box2d"
+
+
+                    >
+                <ImageView android:layout_width="1dp"
+                           android:layout_weight="1"
+                           android:layout_height="@dimen/image_door_height"
+                           android:scaleType="fitXY"
+                           android:id="@+id/door_1"/>
+                <ImageView android:layout_width="1dp"
+                           android:layout_weight="1"
+                           android:layout_height="@dimen/image_door_height"
+                           android:scaleType="fitXY"
+                           android:id="@+id/door_2"/>
+            </LinearLayout>
+
+
+            <ImageView android:layout_width="@dimen/image_door_width"
+                       android:layout_height="@dimen/image_door_height"
+                       android:layout_alignBottom="@+id/second_step_box2d"
+                       android:layout_alignTop="@+id/second_step_box2d"
+                      android:layout_toRightOf="@+id/second_step_box2d"
+                      android:layout_marginLeft="10dp"
+                       android:id="@+id/second_step_current_door"/>
+        </RelativeLayout>
+
+        <RelativeLayout android:layout_width="1dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1">
+
+            <ListView android:layout_width="fill_parent"
+                      android:layout_height="fill_parent"
+                      android:id="@+id/second_step_listView_content"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

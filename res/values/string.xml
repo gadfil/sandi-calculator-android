@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Sandi</string>
+    <string name="collection_standard">Стандартные шкафы</string>
+    <string name="collection_tale">Шкафы \"Сказка\"</string>
+    <string name="first_step_title">Пожалуйста, введите размеры шкафа:</string>
+    <string name="first_step_title_width">Длина:</string>
+    <string name="first_step_title_depth">Глубина:</string>
+    <string name="first_step_title_height">Высота:</string>
+    <string name="first_step_title_type_of_laminate">Тип ламината:</string>
+    <string name="first_step_title_type_of_system_door">Тип системы дверей:</string>
+</resources>
