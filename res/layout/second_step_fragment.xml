@@ -5,7 +5,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:padding="15dp"
-        android:id="@+id/second_step_root">
+                android:id="@+id/second_step_root">
     <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
@@ -17,25 +17,19 @@
                         android:layout_weight="1"
                 >
 
-            <TextView android:layout_width="wrap_content"
-                      android:layout_height="wrap_content"
-                      android:text="@string/second_step_text"
-                      android:id="@+id/second_step_text"
-                      android:layout_centerHorizontal="true"
-                      android:layout_alignParentTop="true"/>
 
             <ImageView android:layout_width="100dp"
                        android:layout_height="100dp"
                        android:id="@+id/second_step_box3d_color"
                        android:background="@drawable/dub_vybelennyi"
-                       android:layout_below="@+id/second_step_text"
+                       android:layout_alignParentTop="true"
 
                     />
             <ImageView android:layout_width="100dp"
                        android:layout_height="100dp"
                        android:id="@+id/second_step_box3d"
                        android:background="@drawable/b18_3d"
-                       android:layout_below="@+id/second_step_text"
+                       android:layout_alignParentTop="true"
 
                     />
             <TextView android:layout_width="wrap_content"
@@ -46,6 +40,18 @@
                       android:id="@+id/second_step_number_box"
                       android:text="№ 18"
                       android:gravity="center_horizontal"/>
+
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/second_step_text"
+                      android:id="@+id/second_step_text"
+                      android:layout_toRightOf="@+id/second_step_number_box"
+                      android:layout_alignBottom="@+id/second_step_box3d_color"
+                      android:paddingLeft="5dp"
+                      android:paddingBottom="7dp"
+                      android:textAppearance="?android:attr/textAppearanceLarge"
+
+                      android:layout_alignParentTop="true"/>
 
             <Spinner android:layout_width="fill_parent"
                      android:layout_height="wrap_content"
@@ -60,7 +66,6 @@
                       android:layout_below="@+id/second_step_spinner"/>
 
 
-
         </RelativeLayout>
 
         <RelativeLayout android:layout_width="1dp"
@@ -73,6 +78,10 @@
                       android:text="@string/second_step_text1"
                       android:layout_marginLeft="10dp"
                       android:layout_marginRight="10dp"
+                      android:layout_above="@+id/second_step_image_box2d"
+                      android:layout_alignParentTop="true"
+                      android:paddingBottom="7dp"
+                      android:textAppearance="?android:attr/textAppearanceLarge"
                       android:id="@+id/second_step_text1"
                     />
 
@@ -82,7 +91,7 @@
                        android:background="@drawable/test_box_2d"
                        android:id="@+id/second_step_image_box2d"
                        android:layout_centerVertical="true"
-                       android:layout_centerHorizontal="true"
+                      android:layout_toLeftOf="@+id/second_step_button_remove_current_door"
 
                     />
 
@@ -90,8 +99,9 @@
                           android:layout_height="@dimen/image_door_height"
                           android:orientation="horizontal"
                           android:weightSum="2"
-                          android:layout_centerHorizontal="true"
+
                           android:layout_centerVertical="true"
+                          android:layout_toLeftOf="@+id/second_step_button_remove_current_door"
                           android:id="@+id/second_step_box2d"
 
 
@@ -113,18 +123,52 @@
                        android:layout_height="@dimen/image_door_height"
                        android:layout_alignBottom="@+id/second_step_box2d"
                        android:layout_alignTop="@+id/second_step_box2d"
-                      android:layout_toRightOf="@+id/second_step_box2d"
-                      android:layout_marginLeft="10dp"
+                       android:layout_alignParentRight="true"
+                       android:layout_marginLeft="10dp"
+                       android:layout_marginRight="7dp"
                        android:id="@+id/second_step_current_door"/>
+            <Button
+                    android:layout_width="@dimen/second_step_bt_width"
+                    android:layout_height="wrap_content"
+                    android:text="Убрать дверь"
+                    android:id="@+id/second_step_button_remove_current_door"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    />
         </RelativeLayout>
 
         <RelativeLayout android:layout_width="1dp"
                         android:layout_height="fill_parent"
                         android:layout_weight="1">
 
+            <TextView android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="@string/second_step_text3"
+
+                      android:textAppearance="?android:attr/textAppearanceLarge"
+                      android:id="@+id/second_step_text2"
+                      android:paddingLeft="5dp"
+                      android:paddingBottom="7dp"
+                      android:paddingTop="7dp"
+                      android:layout_alignParentTop="true"/>
+
             <ListView android:layout_width="fill_parent"
                       android:layout_height="fill_parent"
+                      android:layout_marginTop="5dp"
+                      android:layout_marginBottom="5dp"
+                      android:layout_below="@+id/second_step_text2"
+                      android:layout_above="@+id/second_step_button_next"
                       android:id="@+id/second_step_listView_content"/>
+            <Button
+                    android:layout_width="@dimen/second_step_bt_width"
+                    android:layout_height="wrap_content"
+                    android:text="Далее"
+                    android:id="@+id/second_step_button_next"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="30dp"
+                    />
         </RelativeLayout>
 
     </LinearLayout>
